@@ -43,7 +43,7 @@ Narrow the opportunity list using available filters for:
 - Keywords and providers
 - Location
 - Application deadlines
-- Eligibility status
+- Eligibility criteria
 
 Benefits
 
