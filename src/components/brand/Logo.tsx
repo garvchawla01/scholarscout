@@ -5,7 +5,7 @@ export function Logo({ className }: { className?: string }) {
     <img
       src="/scholarscout-logo.png"
       alt="ScholarScout"
-      className={cn("h-10 w-auto select-none", className)}
+      className={cn("h-12 w-auto select-none", className)}
       draggable={false}
     />
   );
