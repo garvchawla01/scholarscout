@@ -40,13 +40,10 @@ Explore opportunities across six categories:
 
 Narrow the opportunity list using available filters for:
 
-Keywords and providers
-
-Location
-
-Application deadlines
-
-Eligibility status
+- Keywords and providers
+- Location
+- Application deadlines
+- Eligibility status
 
 Benefits
 
@@ -82,51 +79,26 @@ Live Demo: scholarscout-sigma.vercel.app
 
 To display the screenshots above on GitHub, add your actual image files at the specified paths. If you haven't added them yet, you can temporarily remove these two image lines.
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 
-Technology
-
-Purpose
-
-React
-
-Building the user interface
-
-TypeScript
-
-Type-safe development
-
-TanStack Start
-
-Full-stack React framework
-
-Vite
-
-Development and build tooling
-
-Supabase
-
-Backend services and authentication
-
-Vercel
-
-Hosting and deployment
-
-Git and GitHub
-
-Version control and collaboration
+| Technology | Purpose |
+|---|---|
+| React | Building the user interface |
+| TypeScript | Type-safe development |
+| TanStack Start | Full-stack React framework |
+| Vite | Development and build tooling |
+| Supabase | Backend services and authentication |
+| Vercel | Hosting and deployment |
+| Git and GitHub | Version control and collaboration |
 
 ⚙️ Getting Started
 
 Follow these steps to run ScholarScout on your local machine.
 
-Prerequisites
-
-Node.js
-
-npm
-
-Git
+1. Prerequisites
+2. Node.js
+3. npm
+4. Git
 
 A Supabase project if required by the application configuration
 
@@ -177,83 +149,56 @@ ScholarScout is deployed using Vercel.
 
 To deploy your own instance:
 
-Import the GitHub repository into Vercel.
-
-Configure the required environment variables.
-
-Verify the framework and build configuration.
-
-Deploy the application.
-
-Test the homepage, Explore page, authentication, and discovery features.
+1. Import the GitHub repository into Vercel.
+2. Configure the required environment variables.
+3. Verify the framework and build configuration.
+4. Deploy the application.
+5. Test the homepage, Explore page, authentication, and discovery features.
 
 When Vercel is connected to the production branch, new commits pushed to that branch can trigger automatic deployments.
 
 🔒 Security and Reliability
 
-Keep secrets and private credentials out of source control.
-
-Apply appropriate Supabase Row Level Security (RLS) policies.
-
-Validate requests and protect server-side operations.
-
-Verify external application links and opportunity details.
-
-Clearly label demo listings and distinguish them from verified live opportunities.
-
-Test authentication and server-side functions in the deployed environment.
+- Keep secrets and private credentials out of source control.
+- Apply appropriate Supabase Row Level Security (RLS) policies.
+- Validate requests and protect server-side operations.
+- Verify external application links and opportunity details.
+- Clearly label demo listings and distinguish them from verified live opportunities.
+- Test authentication and server-side functions in the deployed environment.
 
 🗺️ Roadmap
 
 Potential improvements for future releases include:
 
-Reliable live opportunity discovery
-
-Verification of official opportunity sources
-
-Personalized opportunity recommendations
-
-Improved eligibility matching
-
-Advanced search and filtering
-
-Saved opportunities and bookmarks
-
-Application deadline reminders
-
-Personalized student dashboard
-
-Improved loading and error states
-
-Mobile responsiveness and accessibility improvements
+- Reliable live opportunity discovery
+- Verification of official opportunity sources
+- Personalized opportunity recommendations
+- Improved eligibility matching
+- Advanced search and filtering
+- Saved opportunities and bookmarks
+- Application deadline reminders
+- Personalized student dashboard
+- Improved loading and error states
+- Mobile responsiveness and accessibility improvements
 
 🤝 Contributing
 
 Contributions, suggestions, and bug reports are welcome.
 
-Fork the repository.
-
-Create a feature branch:
-
-git checkout -b feature/your-feature
-
-Make your changes.
-
-Test the application and production build.
-
-Commit your changes and push the branch.
-
-Open a pull request describing your improvements.
+1. Fork the repository.
+2. Create a feature branch:
+   git checkout -b feature/your-feature
+3. Make your changes.
+4. Test the application and production build.
+5. Commit your changes and push the branch.
+6. Open a pull request describing your improvements.
 
 👨‍💻 Project Links
 
-Live Website: https://scholarscout-sigma.vercel.app/
-
-GitHub Repository: https://github.com/garvchawla01/scholarscout
-
-Hosting Platform: Vercel
-
-Backend Platform: Supabase
+- Live Website: https://scholarscout-sigma.vercel.app/
+- GitHub Repository: https://github.com/garvchawla01/scholarscout
+- Hosting Platform: Vercel
+- Backend Platform: Supabase
 
 <p align="center">
   <strong>Discover opportunities. Unlock your future.</strong>
