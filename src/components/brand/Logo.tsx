@@ -1,3 +1,4 @@
+
 import { cn } from "@/lib/utils";
 
 export function Logo({ className }: { className?: string }) {
@@ -5,7 +6,8 @@ export function Logo({ className }: { className?: string }) {
     <img
       src="/scholarscout-logo.png"
       alt="ScholarScout"
-      className={cn("h-12 w-auto select-none", className)}
+      className={cn("h-16 w-auto object-contain select-none", className)}
+      style={{ height: "64px", width: "auto" }}
       draggable={false}
     />
   );
