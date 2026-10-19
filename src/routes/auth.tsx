@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { supabase } from "@/integrations/supabase/client";
-import { lovable } from "@/integrations/lovable/index";
 import { useAuth } from "@/lib/auth";
 
 export const Route = createFileRoute("/auth")({
@@ -39,14 +38,16 @@ function AuthPage() {
   const [sent, setSent] = useState<string | null>(null);
 
   useEffect(() => {
-    if (!loading && user) navigate({ to: "/dashboard", replace: true });
-  }, [user, loading, navigate]);
+  if (!loading && user) {
+    navigate({ to: "/", replace: true });
+  }
+}, [user, loading, navigate]);
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErr(null);
     const em = emailSchema.safeParse(email);
-    if (!em.success) return setErr(em.error.issues[0]?.message ?? "Invalid email");
+    if (!em.success) return setErr(em.error.issues[0]?.message ?? "Invalid email"); 
     setBusy(true);
     try {
       if (mode === "forgot") {
@@ -72,10 +73,28 @@ function AuthPage() {
     }
   };
 
-  const google = async () => {
-    const r = await lovable.auth.signInWithOAuth("google", { redirect_uri: window.location.origin });
-    if (r.error) toast.error("Google sign-in failed");
-  };
+  
+const google = async () => {
+  setErr(null);
+  setBusy(true);
+
+  try {
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: "google",
+      options: {
+        redirectTo: `${window.location.origin}/auth/callback`,
+      },
+    });
+
+    if (error) throw error;
+  } catch (e) {
+    const message = e instanceof Error ? e.message : "Google sign-in failed";
+    setErr(message);
+    toast.error(message);
+    setBusy(false);
+  }
+};
+
 
   const title = mode === "signup" ? "Create your account" : mode === "forgot" ? "Reset your password" : "Welcome back";
 
